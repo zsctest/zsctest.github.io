@@ -33,11 +33,10 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
 
-      # 如果你用 pnpm（AstroPaper 默认就是）：
       - name: Setup pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@10.0.0 --activate
+        uses: pnpm/action-setup@v4
+        with:
+          version: "11.3.0"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
