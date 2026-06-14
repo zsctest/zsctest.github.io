@@ -34,7 +34,9 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install pnpm
-        run: npm install -g pnpm@11.3.0
+        run: |
+          npm install -g pnpm@11.3.0
+          echo "$(npm bin -g)" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
