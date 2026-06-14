@@ -35,16 +35,13 @@ jobs:
 
       - name: Install pnpm
         run: |
-          npm install -g pnpm@11.3.0 --location=global
-          echo "$(npm bin -g)" >> $GITHUB_PATH
-          export PATH="$(npm bin -g):$PATH"
-          pnpm --version
+          npm exec --package pnpm@11.3.0 pnpm -- --version
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm exec --package pnpm@11.3.0 pnpm -- install --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: npm exec --package pnpm@11.3.0 pnpm -- run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
