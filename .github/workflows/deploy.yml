@@ -33,16 +33,17 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
 
-      - name: Install pnpm
+      - name: Setup pnpm
         run: |
-          npm install -g pnpm@11.3.0
-          echo "$(npm bin -g)" >> $GITHUB_PATH
+          corepack enable
+          corepack prepare pnpm@11.3.0 --activate
+          corepack pnpm --version
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: corepack pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: corepack pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
