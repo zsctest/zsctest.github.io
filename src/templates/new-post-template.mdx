@@ -1,0 +1,43 @@
+---
+title: Your Post Title
+author: Your Name
+pubDatetime: 2026-06-15T08:00:00Z
+modDatetime: 2026-06-15T08:00:00Z
+featured: false
+draft: true
+tags:
+  - example
+description: A short description of your post.
+ogImage: ../../assets/images/example.png
+canonicalURL: https://your-domain.com/your-post-url
+hideEditPost: false
+timezone: Asia/Shanghai
+---
+
+import ResponsiveTable from '@/components/ResponsiveTable.astro';
+
+## Introduction
+
+This is an MDX post template. You can use components directly inside the content.
+
+<ResponsiveTable variant="striped-minimal">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MDX support</td>
+      <td>Embed Astro components inside Markdown content.</td>
+    </tr>
+  </tbody>
+</ResponsiveTable>
+
+## Section
+
+Use standard Markdown plus imported components as needed.
+
+> [!TIP]
+> In `.mdx`, imports must appear above the first Markdown paragraph.
