@@ -26,22 +26,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      # 1. 先安装 pnpm 命令行工具
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.3.0
+
+      # 2. 再初始化 Node.js 并关联 pnpm 缓存
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
 
-      - name: Install pnpm
-        run: |
-          npm exec --package pnpm@11.3.0 pnpm -- --version
-
+      # 3. 此时可以直接爽快地使用 pnpm 命令了
       - name: Install dependencies
-        run: npm exec --package pnpm@11.3.0 pnpm -- install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: npm exec --package pnpm@11.3.0 pnpm -- run build
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
