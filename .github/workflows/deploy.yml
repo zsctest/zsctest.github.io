@@ -16,10 +16,17 @@ jobs:
     steps:
       - name: Checkout your repository
         uses: actions/checkout@v4
+
+      # 👇 新增：安装并指定 pnpm 版本
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9   # 这里写你本地使用的 pnpm 主版本号，可改为 8 或 9，推荐最新稳定版 9
+
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
-          path: . # 仓库根目录下构建项目
+          path: .
 
   deploy:
     needs: build
