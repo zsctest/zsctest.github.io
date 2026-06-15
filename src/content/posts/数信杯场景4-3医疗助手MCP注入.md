@@ -1,7 +1,7 @@
 ---
 title: 2026数信杯AI团体赛决赛场景4-3医疗助手MCP注入
 author: Zst0ry
-pubDatetime: 2026-06-15T0256:31Z
+pubDatetime: 2026-06-15T02:56:31Z
 slug: shuxinbei-4-3-mcp-prompt-inject
 featured: false
 draft: false
