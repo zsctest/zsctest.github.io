@@ -17,26 +17,21 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
-      # 1. 使用 Node 24 自带的 corepack 激活 pnpm（不会有任何 Node 版本警告）
       - name: Enable Corepack & Install pnpm
         run: |
           corepack enable
           corepack prepare pnpm@11.3.0 --activate
 
-      # 2. 设置 Node.js 环境并挂载 pnpm 缓存
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: pnpm
 
-      # 3. 正常安装和构建
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
