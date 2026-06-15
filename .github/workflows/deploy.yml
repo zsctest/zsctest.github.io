@@ -1,8 +1,5 @@
 name: Deploy to GitHub Pages
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   push:
     branches: [main]
@@ -26,18 +23,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      # 1. 先安装 pnpm 命令行工具
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11.3.0
-
-      # 2. 再初始化 Node.js 并关联 pnpm 缓存
+      # 1. 先初始化 Node.js 并关联 pnpm 缓存
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: pnpm
+
+      # 2. 再安装 pnpm 命令行工具
+      - name: Install pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 11.3.0
 
       # 3. 此时可以直接爽快地使用 pnpm 命令了
       - name: Install dependencies
