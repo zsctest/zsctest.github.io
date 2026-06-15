@@ -23,20 +23,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      # 1. 先初始化 Node.js 并关联 pnpm 缓存
+      # 1. 使用 Node 24 自带的 corepack 激活 pnpm（不会有任何 Node 版本警告）
+      - name: Enable Corepack & Install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.3.0 --activate
+
+      # 2. 设置 Node.js 环境并挂载 pnpm 缓存
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: pnpm
 
-      # 2. 再安装 pnpm 命令行工具
-      - name: Install pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          version: 11.3.0
-
-      # 3. 此时可以直接爽快地使用 pnpm 命令了
+      # 3. 正常安装和构建
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
