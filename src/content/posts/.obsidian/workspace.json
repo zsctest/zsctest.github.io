@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "1f72b52e31530988",
+        "id": "4eba2d46ad28d473",
         "type": "split",
         "children": [
           {
@@ -28,11 +28,11 @@
             ]
           },
           {
-            "id": "95e08b9cdf8e30a3",
+            "id": "833ebd86cab2530c",
             "type": "tabs",
             "children": [
               {
-                "id": "802f1236128f2ecf",
+                "id": "5af64fab2e39c18e",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -238,7 +238,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "802f1236128f2ecf",
+  "active": "5af64fab2e39c18e",
   "lastOpenFiles": [
     "记一次内部渗透测试.md",
     "数信杯场景4-3医疗助手MCP注入.md",
