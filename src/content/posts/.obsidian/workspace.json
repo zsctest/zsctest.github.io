@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "43b51bedc0d2a37c",
+        "id": "6856442c015b0a9e",
         "type": "split",
         "children": [
           {
@@ -45,23 +45,23 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "将deepseek输出转为word.md",
+                    "file": "记一次内部渗透测试.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "将deepseek输出转为word"
+                  "title": "记一次内部渗透测试"
                 }
               }
             ],
             "currentTab": 2
           },
           {
-            "id": "ed769c9dd91c0693",
+            "id": "f821ea39ddce3350",
             "type": "tabs",
             "children": [
               {
-                "id": "520cc7a6b481c350",
+                "id": "0d20c331343dac69",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -180,8 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "将deepseek输出转为word.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -190,7 +189,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "将deepseek输出转为word 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -242,21 +241,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "将deepseek输出转为word.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "将deepseek输出转为word 的大纲"
+              "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -270,10 +268,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "520cc7a6b481c350",
+  "active": "0d20c331343dac69",
   "lastOpenFiles": [
-    "将deepseek输出转为word.md",
     "记一次内部渗透测试.md",
+    "将deepseek输出转为word.md",
     "数信杯场景4-3医疗助手MCP注入.md",
     "2026-06-19.md"
   ]
