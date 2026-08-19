@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "19a617bd18175cb2",
+        "id": "0152224dcb234bc6",
         "type": "split",
         "children": [
           {
@@ -54,6 +54,20 @@
                 }
               },
               {
+                "id": "6654dcc9edba7c4e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Anthropic 研究分析：新兴多智能体系统的模式与问题.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Anthropic 研究分析：新兴多智能体系统的模式与问题"
+                }
+              },
+              {
                 "id": "69952e9776b5c63a",
                 "type": "leaf",
                 "state": {
@@ -68,14 +82,14 @@
                 }
               }
             ],
-            "currentTab": 2
+            "currentTab": 3
           },
           {
-            "id": "d601c0e674f6afed",
+            "id": "060270461d6e501b",
             "type": "tabs",
             "children": [
               {
-                "id": "ab64757b58fe6a16",
+                "id": "686c0acbdf164c98",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -284,8 +298,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "ab64757b58fe6a16",
+  "active": "686c0acbdf164c98",
   "lastOpenFiles": [
+    "Anthropic 研究分析：新兴多智能体系统的模式与问题.md",
     "从一段 hasOwnProperty Hook 到可传播 Stored XSS：一次前端持久化攻击链分析.md",
     "vibe coding开发技能初始化.md",
     "数信杯场景4-3医疗助手MCP注入.md",
