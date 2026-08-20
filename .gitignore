@@ -34,3 +34,9 @@ compose.override.yaml
 
 # self
 cmd.txt
+
+# zcode
+.zcode/
+
+# obsidian vault
+src/content/posts/.obsidian/
