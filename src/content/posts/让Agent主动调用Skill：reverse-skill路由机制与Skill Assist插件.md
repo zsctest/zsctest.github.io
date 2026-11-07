@@ -15,7 +15,7 @@ tags:
 description: opencode 能把 Skill 暴露给模型，但模型常常不按 Skill 执行。从 reverse-skill 的"入口引导 + 规则路由"出发，构建事件驱动的 Skill Assist 技能推荐插件
 ---
 
-## 背景：Skill 暴露了，但模型不用
+## Skill 暴露了，但模型不用
 
 最近在用靶场测试以 opencode 作为基础引擎构建渗透测试智能体，为了教会agent解决某一类漏洞写了一份skill，但发现不管怎样它都不加载skill，一股脑的自己在做（模型用的是1017的deepseek-flash)。opencode 原生支持 Skill 机制：把 SKILL.md 放进技能目录，模型就能看到每个技能的 name 和 description，理论上可以在合适的时机按需加载正文。听起来很理想——把渗透测试的方法论拆成一个个 Skill（信息收集、前端逆向、越权测试……），Agent 就能在对的时机用对的方法。
 
@@ -23,9 +23,9 @@ description: opencode 能把 Skill 暴露给模型，但模型常常不按 Skill
 
 ---
 
-## 调研 reverse-skill：不是装一堆 SKILL.md 那么简单
+## 调研 reverse-skill
 
-平时在比赛的时候会用上reverse-skill这个skill集合，使用过程中能明显感知到agent调用了reverse-skill的skill，为了提升opencode对有效skill的使用意愿。我让gpt给我分析了 reverse-skill 项目。reverse-skill的做法并不是简单地把几十个 SKILL.md 安装到 Agent 的技能目录，而是构建了一套**"入口引导 + 任务分类 + 规则路由 + 按需加载 Skill + 工具执行"**的机制。
+平时在比赛的时候会用上reverse-skill这个skill集合，使用过程中能明显感知到agent调用了reverse-skill的skill，为了提升opencode对有效skill的使用意愿。我让gpt给我分析了 reverse-skill 项目。reverse-skill的做法并不是简单地把几十个 SKILL.md 安装到 Agent 的技能目录，而是构建了一套"入口引导 + 任务分类 + 规则路由 + 按需加载 Skill + 工具执行"的机制。
 
 它的 Skill 调用分为两个层次：
 
